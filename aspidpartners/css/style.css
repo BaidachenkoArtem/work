@@ -18,7 +18,7 @@
 .column-services__item::before,
 .column-tabs__item::before,
 .menu-breadcrumb__item:not(:last-child)::after,
-.menu__select .select__value:after,
+.menu__select .select .select__value:after,
 .select__value:after,
 [class*=_icon-]::before {
   font-family: icons;
@@ -481,7 +481,7 @@ textarea.form-contact-us__input {
 ._select-tag {
   cursor: pointer
 }
-.menu__select .select__title {
+.menu__select .select .select__title {
   font-family: Inter;
   font-weight: 500;
   font-size: 1rem;
@@ -495,7 +495,7 @@ textarea.form-contact-us__input {
   text-transform: uppercase;
   transition: all .5s
 }
-.menu__select .select__value:after {
+.menu__select .select .select__value:after {
   content: "";
   color: #1c1b1f;
   align-self: stretch;
@@ -505,11 +505,11 @@ textarea.form-contact-us__input {
   justify-content: center;
   align-items: center
 }
-._select-open .menu__select .select__value:after {
+._select-open .menu__select .select .select__value:after {
   -webkit-transform: rotate(-180deg);
   transform: rotate(-180deg)
 }
-.menu__select .select__options {
+.menu__select .select .select__options {
   color: #000;
   position: absolute;
   top: calc(100% - .0625rem);
@@ -5834,11 +5834,11 @@ body::after {
   .select__option:hover {
     background-color: #f1f3fc
   }
-  .menu__select .select__title:hover {
+  .menu__select .select .select__title:hover {
     background-color: #1848da;
     color: #fff
   }
-  .menu__select .select__value:hover::after {
+  .menu__select .select .select__value:hover::after {
     color: #fff
   }
   .menu__item:hover .sub-menu {
