@@ -1332,6 +1332,7 @@ body::after {
   align-items: flex-start;
   flex-direction: row;
   gap: 1rem;
+  width: 33.125rem;
   background-color: #456ebe
 }
 .card-verticals--color .card-verticals__image {
@@ -1351,6 +1352,7 @@ body::after {
   align-items: flex-start;
   flex-direction: row;
   gap: 1rem;
+  width: 33.125rem;
   -webkit-transform: translateX(-188px);
   transform: translateX(-188px);
   grid-column: 3/4;
@@ -4380,12 +4382,6 @@ body::after {
     transform: translateX(3.25rem)
   }
 }
-@media (max-width:77.5em) {
-  .card-verticals--light {
-    -webkit-transform: translateX(-178px);
-    transform: translateX(-178px)
-  }
-}
 @media (max-width:73.75em) {
   .actions-section-block--advertisers {
     display: grid;
@@ -5774,14 +5770,6 @@ body::after {
 @media (max-width:61.99875em)and (min-width:47.99875em)and (max-width:61.99875em) {
   .hero {
     height: clamp(34.375rem ,2.2329799107rem + 66.9642857143vw ,43.75rem)
-  }
-}
-@media (min-width:71.25em)and (max-width:120em) {
-  .card-verticals--color {
-    width: clamp(12.5rem ,-17.6442307692rem + 42.3076923077vw ,33.125rem)
-  }
-  .card-verticals--light {
-    width: clamp(12.5rem ,-17.6442307692rem + 42.3076923077vw ,33.125rem)
   }
 }
 @media (min-width:68.75em)and (max-width:120em) {
