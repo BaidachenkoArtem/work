@@ -18,6 +18,7 @@
 .column-services__item::before,
 .column-tabs__item::before,
 .menu-breadcrumb__item:not(:last-child)::after,
+.menu__select .select__value:after,
 .select__value:after,
 [class*=_icon-]::before {
   font-family: icons;
@@ -479,6 +480,47 @@ textarea.form-contact-us__input {
 }
 ._select-tag {
   cursor: pointer
+}
+.menu__select .select__title {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 150%;
+  color: #000;
+  background-color: #f1f3fc;
+  border: none;
+  cursor: pointer;
+  min-width: 5.4375rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+  transition: all .5s
+}
+.menu__select .select__value:after {
+  content: "";
+  color: #1c1b1f;
+  align-self: stretch;
+  flex: 0 0 10px;
+  transition: color .5s;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+._select-open .menu__select .select__value:after {
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg)
+}
+.menu__select .select__options {
+  color: #000;
+  position: absolute;
+  top: calc(100% - .0625rem);
+  background-color: #fff;
+  padding: .625rem;
+  border-radius: 1rem;
+  min-width: 100%;
+  left: 0;
+  border-top: 0;
+  border: .0625rem solid rgba(67,83,116,.5);
+  border-top: 0
 }
 .menu__list {
   display: flex;
@@ -1024,13 +1066,17 @@ body::after {
 }
 .header__logo {
   position: relative;
-  z-index: 3
+  z-index: 3;
+  padding-bottom: 1rem
 }
 .header__menu {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: .5rem;
   position: relative;
-  z-index: 1
+  z-index: 1;
+  padding-bottom: 1rem
 }
 .header__actions {
   position: relative;
@@ -4472,6 +4518,9 @@ body::after {
   .menu-open .menu__body::before {
     left: 0
   }
+  .menu__select:not(:last-child) {
+    margin-bottom: 1.25rem
+  }
   .menu__list {
     flex-direction: column;
     align-items: flex-start;
@@ -4577,6 +4626,12 @@ body::after {
     min-height: 3.125rem;
     padding-bottom: .625rem;
     border-radius: 0
+  }
+  .header__logo {
+    padding-bottom: 0
+  }
+  .header__menu {
+    padding-bottom: 0
   }
   .actions-header {
     flex-direction: column;
@@ -5778,6 +5833,13 @@ body::after {
   }
   .select__option:hover {
     background-color: #f1f3fc
+  }
+  .menu__select .select__title:hover {
+    background-color: #1848da;
+    color: #fff
+  }
+  .menu__select .select__value:hover::after {
+    color: #fff
   }
   .menu__item:hover .sub-menu {
     opacity: 1;
