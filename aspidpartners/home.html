@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20250331131434">
+	<link rel="stylesheet" href="css/style.min.css?_v=20250331161333">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,9 +20,9 @@
 				<div class="header__menu menu">
 					<button type="button" class="menu__icon icon-menu"><span></span></button>
 					<nav class="menu__body">
-						<ul class="menu__list">
+						<ul data-spollers="768,max" class="menu__list">
 							<li class="menu__item">
-								<a href="../advertiser.html" class="menu__link _icon-arrow-down">Advertiser</a>
+								<a href="../advertiser.html" data-spoller class="menu__link menu__arrow _icon-arrow-down">Advertiser</a>
 								<div class="menu__sub-menu sub-menu">
 									<ul class="sub-menu__list">
 										<li class="sub-menu__item">
@@ -146,45 +146,94 @@
 							<h2 class="top-block__title top-block__title--color">Verticals</h2>
 						</div>
 						<div class="verticals__column column-verticals">
-							<article class="column-verticals__card card-verticals card-verticals--main">
-								<img class="card-verticals__image ibg" src="img/home/verticals/e-commerce.webp" alt="Image">
-								<h4 class="card-verticals__title">E-commerce</h4>
-								<div class="card-verticals__text">
-									Global brand names and local retailers trust ClickDealer to put their latest products and promotions in front of relevant audiences.
-								</div>
-							</article>
-							<article class="column-verticals__card card-verticals card-verticals--white">
-								<img class="card-verticals__image ibg" src="img/home/verticals/dating.webp" alt="Image">
-								<h4 class="card-verticals__title">Mainstream Dating</h4>
-								<div class="card-verticals__text">
-									Decades-long partnerships with the world’s most popular dating platforms give us the experience needed to negotiate the most beneficial deals for all parties involved.
-								</div>
-							</article>
-							<article class="column-verticals__card card-verticals card-verticals--blue">
-								<img class="card-verticals__image ibg" src="img/home/verticals/software.webp" alt="Image">
-								<h4 class="card-verticals__title">Software & Utilities</h4>
-								<div class="card-verticals__text">
-									Long-term cooperation with global leaders in cyber security and consumer software gives us unparalleled expertise in CPS campaign optimization and the exclusive deals that come with it.
-								</div>
-							</article>
-							<article class="column-verticals__card card-verticals card-verticals--color">
-								<img class="card-verticals__image ibg" src="img/home/verticals/per-call.webp" alt="Image">
-								<div class="card-verticals__content">
-									<h4 class="card-verticals__title">Pay Per Call</h4>
-									<div class="card-verticals__text">
-										Extensive feedback from call centers, granular tracking, and specialized managers provide all the data required to push the limits of campaign optimization in every niche.
+							<div class="column-verticals__items">
+								<article class="column-verticals__card card-verticals card-verticals--main e-commerce">
+									<img class="card-verticals__image ibg" src="img/home/verticals/e-commerce.webp" alt="Image">
+									<div class="card-verticals__content">
+										<h4 class="card-verticals__title">E-commerce</h4>
+										<div class="card-verticals__text">
+											Global brand names and local retailers trust ClickDealer to put their latest products and promotions in front of relevant audiences.
+										</div>
 									</div>
-								</div>
-							</article>
-							<article class="column-verticals__card card-verticals card-verticals--light">
-								<img class="card-verticals__image ibg" src="img/home/verticals/lead-generation.webp" alt="Image">
-								<div class="card-verticals__content">
-									<h4 class="card-verticals__title">Lead Generation</h4>
-									<div class="card-verticals__text">
-										From home improvement to finance, ClickDealer has niche-specific know-how on targeting fitting prospects for local companies, and we know exactly how much every lead is worth.
+								</article>
+								<article class="column-verticals__card card-verticals card-verticals--white mainstream-dating">
+									<img class="card-verticals__image ibg" src="img/home/verticals/dating.webp" alt="Image">
+									<div class="card-verticals__content">
+										<h4 class="card-verticals__title">Mainstream Dating</h4>
+										<div class="card-verticals__text">
+											Decades-long partnerships with the world’s most popular dating platforms give us the experience needed to negotiate the most beneficial deals for all parties involved.
+										</div>
 									</div>
-								</div>
-							</article>
+								</article>
+								<article class="column-verticals__card card-verticals card-verticals--blue software-utilities">
+									<img class="card-verticals__image ibg" src="img/home/verticals/software.webp" alt="Image">
+									<div class="card-verticals__content">
+										<h4 class="card-verticals__title">Software & Utilities</h4>
+										<div class="card-verticals__text">
+											Long-term cooperation with global leaders in cyber security and consumer software gives us unparalleled expertise in CPS campaign optimization and the exclusive deals that come with it.
+										</div>
+									</div>
+								</article>
+							</div>
+							<div class="column-verticals__items column-verticals__items--row">
+								<article class="column-verticals__card card-verticals card-verticals--color pay-per-call">
+									<img class="card-verticals__image ibg" src="img/home/verticals/per-call.webp" alt="Image">
+									<div class="card-verticals__content">
+										<h4 class="card-verticals__title">Pay Per Call</h4>
+										<div class="card-verticals__text">
+											Extensive feedback from call centers, granular tracking, and specialized managers provide all the data required to push the limits of campaign optimization in every niche.
+										</div>
+									</div>
+								</article>
+								<article class="column-verticals__card card-verticals card-verticals--light lead-generation">
+									<img class="card-verticals__image ibg" src="img/home/verticals/lead-generation.webp" alt="Image">
+									<div class="card-verticals__content">
+										<h4 class="card-verticals__title">Lead Generation</h4>
+										<div class="card-verticals__text">
+											From home improvement to finance, ClickDealer has niche-specific know-how on targeting fitting prospects for local companies, and we know exactly how much every lead is worth.
+										</div>
+									</div>
+								</article>
+							</div>
+							<!-- <article class="column-verticals__card card-verticals card-verticals--main e-commerce">
+									<img class="card-verticals__image ibg" src="img/home/verticals/e-commerce.webp" alt="Image">
+									<h4 class="card-verticals__title">E-commerce</h4>
+									<div class="card-verticals__text">
+										Global brand names and local retailers trust ClickDealer to put their latest products and promotions in front of relevant audiences.
+									</div>
+								</article>
+								<article class="column-verticals__card card-verticals card-verticals--white mainstream-dating">
+									<img class="card-verticals__image ibg" src="img/home/verticals/dating.webp" alt="Image">
+									<h4 class="card-verticals__title">Mainstream Dating</h4>
+									<div class="card-verticals__text">
+										Decades-long partnerships with the world’s most popular dating platforms give us the experience needed to negotiate the most beneficial deals for all parties involved.
+									</div>
+								</article>
+								<article class="column-verticals__card card-verticals card-verticals--blue software-utilities">
+									<img class="card-verticals__image ibg" src="img/home/verticals/software.webp" alt="Image">
+									<h4 class="card-verticals__title">Software & Utilities</h4>
+									<div class="card-verticals__text">
+										Long-term cooperation with global leaders in cyber security and consumer software gives us unparalleled expertise in CPS campaign optimization and the exclusive deals that come with it.
+									</div>
+								</article>
+								<article class="column-verticals__card card-verticals card-verticals--color pay-per-call">
+									<img class="card-verticals__image ibg" src="img/home/verticals/per-call.webp" alt="Image">
+									<div class="card-verticals__content">
+										<h4 class="card-verticals__title">Pay Per Call</h4>
+										<div class="card-verticals__text">
+											Extensive feedback from call centers, granular tracking, and specialized managers provide all the data required to push the limits of campaign optimization in every niche.
+										</div>
+									</div>
+								</article>
+								<article class="column-verticals__card card-verticals card-verticals--light lead-generation">
+									<img class="card-verticals__image ibg" src="img/home/verticals/lead-generation.webp" alt="Image">
+									<div class="card-verticals__content">
+										<h4 class="card-verticals__title">Lead Generation</h4>
+										<div class="card-verticals__text">
+											From home improvement to finance, ClickDealer has niche-specific know-how on targeting fitting prospects for local companies, and we know exactly how much every lead is worth.
+										</div>
+									</div>
+								</article> -->
 						</div>
 					</div>
 				</div>
@@ -785,7 +834,7 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/app.min.js?_v=20250331131434"></script>
+	<script src="js/app.min.js?_v=20250331161333"></script>
 </body>
 
 </html>

@@ -1271,12 +1271,20 @@ body::after {
 }
 .verticals__column {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(18.75rem,1fr));
   gap: 2rem
 }
 .column-verticals__card {
   display: flex;
   flex-direction: column
+}
+.column-verticals__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(17.5rem,1fr));
+  gap: 2rem
+}
+.column-verticals__items--row {
+  display: flex;
+  gap: 2rem
 }
 .card-verticals {
   border-radius: 1rem
@@ -1332,7 +1340,6 @@ body::after {
   align-items: flex-start;
   flex-direction: row;
   gap: 1rem;
-  width: 33.125rem;
   background-color: #456ebe
 }
 .card-verticals--color .card-verticals__image {
@@ -1352,10 +1359,6 @@ body::after {
   align-items: flex-start;
   flex-direction: row;
   gap: 1rem;
-  width: 33.125rem;
-  -webkit-transform: translateX(-188px);
-  transform: translateX(-188px);
-  grid-column: 3/4;
   background-color: #cfd8fe
 }
 .card-verticals--light .card-verticals__image {
@@ -4344,21 +4347,6 @@ body::after {
   .card-verticals--color .card-verticals__image:not(:last-child) {
     margin-bottom: 1rem
   }
-  .card-verticals--color {
-    grid-column: auto;
-    width: auto;
-    display: grid
-  }
-  .card-verticals--light {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    grid-column: auto;
-    width: auto;
-    display: grid
-  }
-  .card-verticals--light .card-verticals__image:not(:last-child) {
-    margin-bottom: 1rem
-  }
 }
 @media (max-width:102.5em) {
   .header {
@@ -4426,6 +4414,11 @@ body::after {
     flex-wrap: wrap
   }
 }
+@media (max-width:63.875em) {
+  .column-verticals__items {
+    grid-template-columns: repeat(auto-fit,minmax(15rem,1fr))
+  }
+}
 @media (max-width:61.99875em) {
   .popup__close {
     top: .625rem;
@@ -4442,6 +4435,31 @@ body::after {
   }
   .hero--advertisers {
     min-height: 45rem
+  }
+  .column-verticals__items {
+    grid-template-columns: 1fr
+  }
+  .column-verticals__items--row {
+    display: grid;
+    grid-template-columns: 1fr
+  }
+  .card-verticals--main {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem
+  }
+  .card-verticals--white {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem
+  }
+  .card-verticals--blue {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem
   }
   .about-us__container {
     grid-template-columns: auto
@@ -4502,7 +4520,7 @@ body::after {
     top: 0;
     overflow: auto;
     padding: 6.25rem .9375rem 1.875rem .9375rem;
-    background-color: #a1a9b9;
+    background-color: #f1f3fc;
     transition: left .3s
   }
   .menu__body::before {
@@ -4531,8 +4549,7 @@ body::after {
     margin-bottom: 1.25rem
   }
   .menu__link {
-    justify-content: flex-end;
-    padding-bottom: .9375rem
+    justify-content: flex-end
   }
   .menu__sub-menu {
     position: relative;
@@ -4540,6 +4557,11 @@ body::after {
     visibility: visible;
     top: 0;
     left: 0
+  }
+  .sub-menu {
+    margin-top: .625rem;
+    background-color: #f1f3fc;
+    padding: .625rem
   }
   .sub-menu__item:not(:last-child) {
     margin-bottom: 1.25rem
@@ -4613,7 +4635,8 @@ body::after {
     margin-bottom: 1rem
   }
   .header {
-    padding-top: .9375rem
+    padding-top: .625rem;
+    padding-bottom: .625rem
   }
   .header._header-scroll {
     padding-top: 0
@@ -4621,8 +4644,9 @@ body::after {
   .header__container {
     grid-template-columns: 1fr auto;
     gap: 1.875rem;
-    min-height: 3.125rem;
-    padding-bottom: .625rem
+    min-height: 3.75rem;
+    padding-bottom: .625rem;
+    padding-top: .625rem
   }
   .header__logo {
     padding-bottom: 0
@@ -4643,9 +4667,6 @@ body::after {
   .actions-header__button {
     width: 100%;
     justify-content: center
-  }
-  .actions-header__button:not(:last-child) {
-    margin-bottom: 1.25rem
   }
   .actions-header__sub-menu {
     position: relative;
@@ -4862,6 +4883,28 @@ body::after {
   .actions-form-block__button {
     width: 100%;
     justify-content: center
+  }
+}
+@media (max-width:40.625em) {
+  .card-verticals--main {
+    flex-direction: column;
+    align-items: flex-start
+  }
+  .card-verticals--white {
+    flex-direction: column;
+    align-items: flex-start
+  }
+  .card-verticals--blue {
+    flex-direction: column;
+    align-items: flex-start
+  }
+  .card-verticals--color {
+    flex-direction: column;
+    align-items: flex-start
+  }
+  .card-verticals--light {
+    flex-direction: column;
+    align-items: flex-start
   }
 }
 @media (max-width:37.5em) {
