@@ -4693,7 +4693,7 @@
             breakpoints: {
                 320: {
                     slidesPerView: 1,
-                    spaceBetween: 8
+                    spaceBetween: 12
                 },
                 550: {
                     slidesPerView: 2,
