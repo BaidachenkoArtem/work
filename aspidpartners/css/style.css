@@ -490,7 +490,7 @@ textarea.form-contact-us__input {
   background-color: #f1f3fc;
   border: none;
   cursor: pointer;
-  min-width: 5.4375rem;
+  width: 100%;
   border-radius: 1rem;
   text-transform: uppercase;
   transition: all .5s
