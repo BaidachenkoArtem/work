@@ -1137,26 +1137,6 @@ body::after {
   position: relative;
   transition: all .3s ease 0s
 }
-.spollers-footer__link--color {
-  color: #a1a9b9;
-  position: relative;
-  transition: all .3s ease 0s
-}
-.spollers-footer__link--color:hover::before {
-  left: 0;
-  width: 100%
-}
-.spollers-footer__link--color::before {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: .0625rem;
-  background-color: #a1a9b9;
-  bottom: -.0625rem;
-  left: 0;
-  transition: left .3s ease,width .3s ease;
-  pointer-events: none
-}
 .spollers-footer__link:hover {
   color: #a1a9b9
 }
