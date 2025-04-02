@@ -5065,6 +5065,43 @@
             showMoreButton.style.transform = isExpanded ? "scale(1.1)" : "scale(1)";
         }));
     }));
+    document.addEventListener("DOMContentLoaded", (function() {
+        const spollers = document.querySelectorAll("[data-spoller]");
+        spollers.forEach((spoller => {
+            spoller.addEventListener("click", (function(e) {
+                e.preventDefault();
+                const parentItem = spoller.closest(".menu__item, .actions-header__item");
+                if (!parentItem) return;
+                const subMenu = parentItem.querySelector(".menu__sub-menu, .actions-header__sub-menu");
+                if (subMenu) {
+                    const isOpen = parentItem.classList.contains("_active");
+                    closeAllSubMenus();
+                    if (!isOpen) {
+                        parentItem.classList.add("_active");
+                        subMenu.style.maxHeight = `${subMenu.scrollHeight}px`;
+                    }
+                }
+            }));
+        }));
+        function closeAllSubMenus() {
+            document.querySelectorAll(".menu__item._active, .actions-header__item._active").forEach((item => {
+                item.classList.remove("_active");
+                const subMenu = item.querySelector(".menu__sub-menu, .actions-header__sub-menu");
+                if (subMenu) subMenu.style.maxHeight = "0";
+            }));
+        }
+        window.addEventListener("resize", (() => {
+            if (window.innerWidth <= 768) spollers.forEach((spoller => {
+                const parentItem = spoller.closest(".menu__item, .actions-header__item");
+                if (!parentItem) return;
+                const subMenu = parentItem.querySelector(".menu__sub-menu, .actions-header__sub-menu");
+                if (subMenu) {
+                    subMenu.style.maxHeight = "0";
+                    parentItem.classList.remove("_active");
+                }
+            }));
+        }));
+    }));
     window["FLS"] = true;
     menuInit();
     spollers();

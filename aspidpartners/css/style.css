@@ -500,7 +500,7 @@ textarea.form-contact-us__input {
   color: #000;
   border-radius: 2rem;
   background-color: rgba(0,0,0,0);
-  transition: background-color .5s
+  transition: all .5s
 }
 .menu__sub-menu {
   position: absolute;
@@ -517,7 +517,8 @@ textarea.form-contact-us__input {
   background-color: #fff;
   padding: 1rem;
   border-radius: 1rem;
-  min-width: 10.375rem
+  min-width: 10.375rem;
+  transition: all .3s ease
 }
 .sub-menu__link {
   display: flex;
@@ -4528,6 +4529,19 @@ body::after {
   .menu__list:not(:last-child) {
     margin-bottom: 1.25rem
   }
+  .menu__item .menu__sub-menu {
+    display: none
+  }
+  .menu__item._active {
+    transition: all .5s
+  }
+  .menu__item._active .menu__sub-menu {
+    display: block
+  }
+  .menu__item._active .menu__link::before {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg)
+  }
   .menu__link {
     justify-content: flex-end
   }
@@ -4539,9 +4553,8 @@ body::after {
     left: 0
   }
   .sub-menu {
-    margin-top: .625rem;
     background-color: #f1f3fc;
-    padding: .625rem
+    padding: .9375rem .625rem
   }
   .sub-menu__item:not(:last-child) {
     margin-bottom: 1.25rem
@@ -4639,10 +4652,21 @@ body::after {
     gap: 1rem
   }
   .actions-header__item {
-    padding-bottom: 0
-  }
-  .actions-header__item {
+    padding-bottom: 0;
     width: 100%
+  }
+  .actions-header__item .actions-header__sub-menu {
+    display: none
+  }
+  .actions-header__item._active {
+    transition: all .5s
+  }
+  .actions-header__item._active .actions-header__sub-menu {
+    display: block
+  }
+  .actions-header__item._active .button::after {
+    -webkit-transform: rotate(-180deg);
+    transform: rotate(-180deg)
   }
   .actions-header__button {
     width: 100%;
